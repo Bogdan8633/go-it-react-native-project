@@ -1,9 +1,6 @@
 // import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 
-// import { useFonts } from "expo-font";
-// import * as SplashScreen from "expo-splash-screen";
-
 import {
   StyleSheet,
   Text,
@@ -16,8 +13,6 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
 } from "react-native";
-
-// SplashScreen.preventAutoHideAsync();
 
 const initialState = {
   email: "",
@@ -40,10 +35,6 @@ export default function LoginScreen() {
     console.log(state);
     setState(initialState);
   };
-
-  // const [fontsLoaded] = useFonts({
-  //   "Roboto-Regular": require("../assets/fonts/Roboto-Regular.ttf"),
-  // });
 
   return (
     <TouchableWithoutFeedback onPress={keyboardHide}>
