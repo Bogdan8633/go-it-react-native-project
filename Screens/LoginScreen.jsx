@@ -20,7 +20,6 @@ const initialState = {
 };
 
 export default function LoginScreen() {
-  // console.log("Тип платформи з якої переглядається сторінка: ", Platform.OS);
   const [isShowKeyboard, setIsShowKeyboard] = useState(false);
   const [state, setState] = useState(initialState);
 
@@ -53,7 +52,7 @@ export default function LoginScreen() {
                   paddingBottom: isShowKeyboard ? 20 : 100,
                 }}
               >
-                <Text style={styles.title}>Ввійти</Text>
+                <Text style={styles.title}>Вхід</Text>
                 <View>
                   <TextInput
                     style={styles.input}
@@ -89,7 +88,7 @@ export default function LoginScreen() {
                   style={styles.btn}
                   onPress={handleSubmit}
                 >
-                  <Text style={styles.btnTitle}>Ввійти</Text>
+                  <Text style={styles.btnTitle}>Увійти</Text>
                 </TouchableOpacity>
                 <Text style={styles.toRegister}>
                   Немає аккаунта? Зареєструватися
@@ -107,25 +106,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    // alignItems: "center",
-    // justifyContent: "center",
   },
   image: {
     flex: 1,
     resizeMode: "cover",
     justifyContent: "flex-end",
-    // alignItems: "center",
   },
   formBackgound: {
     backgroundColor: "#FFFFFF",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    // paddingBottom: 100,
   },
   form: {
     marginHorizontal: 16,
     paddingTop: 32,
-    // paddingBottom: 100,
   },
   title: {
     color: "#212121",
