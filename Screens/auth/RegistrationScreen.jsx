@@ -12,6 +12,7 @@ import {
   KeyboardAvoidingView,
   Keyboard,
   TouchableWithoutFeedback,
+  Button,
 } from "react-native";
 
 const initialState = {
@@ -20,7 +21,7 @@ const initialState = {
   password: "",
 };
 
-export default function RegistrationScreen() {
+export default function RegistrationScreen({ navigation }) {
   const [isShowKeyboard, setIsShowKeyboard] = useState(false);
   const [state, setState] = useState(initialState);
 
@@ -41,7 +42,7 @@ export default function RegistrationScreen() {
       <View style={styles.container}>
         <ImageBackground
           style={styles.image}
-          source={require("../assets/images/photoBackground.jpg")}
+          source={require("../../assets/images/photoBackground.jpg")}
         >
           <KeyboardAvoidingView
             behavior={Platform.OS == "ios" ? "padding" : ""}
@@ -107,7 +108,12 @@ export default function RegistrationScreen() {
                 >
                   <Text style={styles.btnTitle}>Зареєструватися</Text>
                 </TouchableOpacity>
-                <Text style={styles.toRegister}>Вже маєте аккаунт? Увійти</Text>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate("Login")}
+                  style={{ marginTop: 16 }}
+                >
+                  <Text style={styles.toLogin}>Вже маєте аккаунт? Увійти</Text>
+                </TouchableOpacity>
               </View>
             </View>
           </KeyboardAvoidingView>
@@ -175,10 +181,9 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 16,
   },
-  toRegister: {
+  toLogin: {
     color: "#1B4371",
     fontSize: 18,
     textAlign: "center",
-    marginTop: 16,
   },
 });
