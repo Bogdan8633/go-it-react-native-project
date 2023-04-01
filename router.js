@@ -42,7 +42,7 @@ export const useRoute = (isAuth) => {
             <Feather name="grid" size={size} color={color} />
           ),
         }}
-        name="Публікації"
+        name="Posts"
         component={PostsScreen}
       />
       <MainTab.Screen

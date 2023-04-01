@@ -12,7 +12,6 @@ import {
   KeyboardAvoidingView,
   Keyboard,
   TouchableWithoutFeedback,
-  Button,
 } from "react-native";
 
 const initialState = {
